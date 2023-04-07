@@ -1,0 +1,19 @@
+﻿@model CoreDemo.Controllers.Class1
+@{
+    ViewData["Title"] = "EditEmployee";
+    Layout = "~/Views/Shared/AdminLayout.cshtml";
+}
+
+
+<form method="Post" asp-action="EditEmployee" asp-controller="EmployeeTest">
+
+    <label>ID</label>
+  @* @Html.TextBoxFor(x=>x.ID,new {@class="form-control"})*@
+   <input asp-for="@Model.ID" class="form-control" />
+    <br />
+    <label>Adınız Soyadınız</label>
+  @*  @Html.TextBoxFor(x=>x.Name,new {@class="form-control"})*@
+    <input asp-for="@Model.Name" class="form-control" />
+    <br />
+    <button type="submit" class="btn btn-outline-success">Güncelle</button>
+</form>
